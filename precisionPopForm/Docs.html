@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Precision Pop Out - Documentation</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="jquery.precision-popout-1.10.min.js"></script>
+
+    <script>
+        $(function(){
+            $('#Demo1').precisionPopOut({
+                loadTweenMax: true,
+                width: '100%',
+                height: '300px',
+                clickDefaultPos: 'top',
+                clickResPos: 'bottom',
+                markUpInc: false,
+                inlineCSS: true,
+                container: '#container',
+                popClickText: 'Demo1',
+                popOutDirection: 'top'
+            });
+
+            $('#Demo2').precisionPopOut({
+                loadTweenMax: true,
+                width: '60%',
+                clickDefaultPos: 'left',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo2',
+                popOutDirection: 'left',
+                container: '#container'
+            });
+
+            $('#Demo3').precisionPopOut({
+                loadTweenMax: true,
+                width: '60%',
+                container: '#container',
+                clickDefaultPos: 'right',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo3',
+                popOutDirection: 'right'
+            });
+
+            $('#Demo4').precisionPopOut({
+                loadTweenMax: true,
+                width: '100%',
+                container: '#container',
+                height: '300px',
+                clickDefaultPos: 'bottom',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo4',
+                popOutDirection: 'bottom',
+                blackOut: true
+            });
+
+            //= Initialize Form
+            //$('#ppPopForm').ppPopForm();
+
+            $('#getGSAPWrapper').precisionPopOut({
+                inlineCSS: true,
+                markUpInc: false,
+                loadTweenMax: true,
+                popClickText: 'Click Here',
+                width: '50%',
+                container: '#main',
+                resWindowWidth: 900,
+                clickResPos: 'right',
+                clickDefaultPos: 'top',
+                blackOut: false
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <div id="Demo1">
+            <h1>Here is Demo 1</h1>
+        </div>
+        <div id="Demo2">
+            <h1>Here is Demo 2</h1>
+        </div>
+        <div id="Demo3">
+            <h1>Here is Demo 3</h1>
+        </div>
+        <div id="Demo4">
+            <h1>Here is Demo 4</h1>
+        </div>
+
+        <h1>This is the main page. Watch as it slides out of the way of the popout.</h1>
+    </div>
+
+</body>
+</html>
