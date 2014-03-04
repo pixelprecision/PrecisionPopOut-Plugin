@@ -18,14 +18,16 @@ $.fn.precisionPopOut = function (settings) {
         loadRotatePlugin: false,
         width: '70%',
         height: '100%',
-        backgroundColor: '#465667',
+        backgroundColor: '#333',
         textColor: '#fff',
         padding: 20,
         container: '#Container',
         clickBackground: '#ff3600',
         clickColor: '#fff',
-        clickHeight: 120,
-        clickWidth: 30,
+        clickHeightH: 30,
+        clickWidthH: 120,
+        clickHeightV: 120,
+        clickWidthV: 30,
         clickDefaultPos: 'top',
         clickResPos: 'bottom'
     };
@@ -34,7 +36,7 @@ $.fn.precisionPopOut = function (settings) {
         $.extend(config, settings);
     }
 
-    var speedMilli = config.speed * 10000;
+
 
     //= MOBILE DEVICE CHECK
     //==============================================================================================================================================
@@ -44,6 +46,7 @@ $.fn.precisionPopOut = function (settings) {
     //= PLUGIN EACH FUNCTION
     //==============================================================================================================================================
     return this.each(function () {
+        var speedMilli = config.speed * 1000;
         var _this = $(this);
         var body = $('body');
         var popClick, popText, close;
@@ -91,8 +94,8 @@ $.fn.precisionPopOut = function (settings) {
         var ppClose = _this.find('#ppClose');
         var container = $(config.container);
         var containerPos = container.css('position');
-        
-        
+
+
         console.log('container position: ' + containerPos);
 
         //= Load Tween Max
@@ -104,7 +107,7 @@ $.fn.precisionPopOut = function (settings) {
             $(loadTweenMax).appendTo('head');
         }
 
-        
+
         //= SET VERTICAL POSITION OF CLICK
         //===========================================================================
         popClick.setVertPos();
@@ -113,16 +116,20 @@ $.fn.precisionPopOut = function (settings) {
         //===========================================================================
         var showForm = function () {
 
-            if(config.popOutDirection == 'top'){
+            if (config.popOutDirection == 'top') {
                 TweenMax.to(ppPopOut, config.speed, {
                     top: 0,
                     boxShadow: '0 0 36px 3px #000'
                 });
-                TweenMax.to(container, config.speed, {
-                    position: 'relative',
-                    top: config.height
+                container.css({
+                    position: 'absolute'
                 });
-            } else if(config.popOutDirection == 'bottom'){
+                TweenMax.to(container, config.speed, {
+
+                    top: config.height,
+                    bottom: 'auto'
+                });
+            } else if (config.popOutDirection == 'bottom') {
                 TweenMax.to(ppPopOut, config.speed, {
                     bottom: 0,
                     boxShadow: '0 0 36px 3px #000'
@@ -132,7 +139,7 @@ $.fn.precisionPopOut = function (settings) {
                     bottom: config.height,
                     top: 'auto'
                 });
-            } else if(config.popOutDirection == 'left'){
+            } else if (config.popOutDirection == 'left') {
                 TweenMax.to(ppPopOut, config.speed, {
                     left: 0,
                     boxShadow: '0 0 36px 3px #000'
@@ -169,7 +176,7 @@ $.fn.precisionPopOut = function (settings) {
         //= HIDE FORM FUNCTIONS
         //===========================================================================
         var hideForm = function () {
-            if(config.popOutDirection == 'top'){
+            if (config.popOutDirection == 'top') {
                 TweenMax.to(ppPopOut, config.speed, {
                     top: '-' + config.height
                 });
@@ -177,7 +184,7 @@ $.fn.precisionPopOut = function (settings) {
                     position: 'relative',
                     top: 0
                 });
-            } else if(config.popOutDirection == 'bottom'){
+            } else if (config.popOutDirection == 'bottom') {
                 TweenMax.to(ppPopOut, config.speed, {
                     bottom: '-' + config.height
                 });
@@ -185,7 +192,12 @@ $.fn.precisionPopOut = function (settings) {
                     position: 'relative',
                     bottom: 0
                 });
-            } else if(config.popOutDirection == 'left'){
+                setTimeout(function () {
+                    container.css({
+                        bottom: 'auto'
+                    });
+                }, speedMilli*1.1);
+            } else if (config.popOutDirection == 'left') {
                 TweenMax.to(ppPopOut, config.speed, {
                     left: '-' + config.width
                 });
@@ -211,7 +223,7 @@ $.fn.precisionPopOut = function (settings) {
                 body.css({
                     overflow: 'auto'
                 });
-            }, speedMilli);
+            }, speedMilli*1.1);
 
             if (config.blackOut) {
                 TweenMax.to(ppFadeOut, config.speed, {
@@ -221,7 +233,7 @@ $.fn.precisionPopOut = function (settings) {
                     ppFadeOut.css({
                         display: 'none'
                     });
-                }, speedMilli);
+                }, speedMilli*1.1);
             }
         };
 
@@ -260,8 +272,8 @@ $.fn.precisionPopOut = function (settings) {
                 popClick.css({
                     top: 0,
                     bottom: 'auto',
-                    height: config.clickWidth,
-                    width: config.clickHeight
+                    height: config.clickHeightH,
+                    width: config.clickWidthH
                 });
                 popClick.setHorizPos();
 
@@ -270,14 +282,15 @@ $.fn.precisionPopOut = function (settings) {
                     rotate: 0,
                     transformOrigin: '0 0',
                     left: 0,
-                    lineHeight: config.clickWidth + 'px'
+                    width: config.clickWidthH,
+                    lineHeight: config.clickHeightH + 'px'
                 });
             } else if (config.clickDefaultPos == 'bottom') {
                 popClick.css({
                     bottom: 0,
                     top: 'auto',
-                    height: config.clickWidth,
-                    width: config.clickHeight
+                    height: config.clickHeightH,
+                    width: config.clickWidthH
                 });
                 popClick.setHorizPos();
 
@@ -286,23 +299,25 @@ $.fn.precisionPopOut = function (settings) {
                     rotate: 0,
                     transformOrigin: '0 0',
                     left: 0,
-                    lineHeight: config.clickWidth + 'px'
+                    width: config.clickWidthH,
+                    lineHeight: config.clickHeightH + 'px'
                 });
             } else if (config.clickDefaultPos == 'left') {
                 popClick.css({
                     left: 0,
                     right: 'auto',
                     top: 'auto',
-                    height: config.clickHeight,
-                    width: config.clickWidth
+                    height: config.clickHeightV,
+                    width: config.clickWidthV
                 });
 
                 //= ROTATE TEXT 90 DEGREES
                 popText.css({
                     rotate: 90,
                     transformOrigin: '0 0',
-                    left: 30,
-                    lineHeight: config.clickWidth + 'px'
+                    left: 25,
+                    width: config.clickHeightV,
+                    lineHeight: config.clickWidthV + 'px'
                 });
                 popClick.setVertPos();
             } else {
@@ -310,16 +325,17 @@ $.fn.precisionPopOut = function (settings) {
                     right: 0,
                     left: 'auto',
                     top: 'auto',
-                    height: config.clickHeight,
-                    width: config.clickWidth
+                    height: config.clickHeightV,
+                    width: config.clickWidthV
                 });
 
                 //= ROTATE TEXT 90 DEGREES
                 popText.css({
                     rotate: 90,
                     transformOrigin: '0 0',
-                    left: 30,
-                    lineHeight: config.clickWidth + 'px'
+                    left: 25,
+                    width: config.clickHeightV,
+                    lineHeight: config.clickWidthV + 'px'
                 });
                 popClick.setVertPos('right');
             }
@@ -330,8 +346,8 @@ $.fn.precisionPopOut = function (settings) {
                 popClick.css({
                     top: 0,
                     bottom: 'auto',
-                    height: config.clickWidth,
-                    width: config.clickHeight
+                    height: config.clickHeightH,
+                    width: config.clickWidthH
                 });
                 popClick.setHorizPos();
 
@@ -340,15 +356,16 @@ $.fn.precisionPopOut = function (settings) {
                     rotate: 0,
                     transformOrigin: '0 0',
                     left: 0,
-                    lineHeight: config.clickWidth + 'px'
+                    width: config.clickWidthH,
+                    lineHeight: config.clickHeightH + 'px'
 
                 });
             } else if (config.clickResPos == 'bottom') {
                 popClick.css({
                     bottom: 0,
                     top: 'auto',
-                    height: config.clickWidth,
-                    width: config.clickHeight
+                    height: config.clickHeightH,
+                    width: config.clickWidthH
                 });
                 popClick.setHorizPos();
 
@@ -357,15 +374,16 @@ $.fn.precisionPopOut = function (settings) {
                     rotate: 0,
                     transformOrigin: '0 0',
                     left: 0,
-                    lineHeight: config.clickWidth + 'px'
+                    width: config.clickWidthH,
+                    lineHeight: config.clickHeightH + 'px'
                 });
             } else if (config.clickResPos == 'left') {
                 popClick.css({
                     left: 0,
                     right: 'auto',
                     top: 'auto',
-                    height: config.clickHeight,
-                    width: config.clickWidth
+                    height: config.clickHeightV,
+                    width: config.clickWidthV
                 });
                 popClick.setVertPos();
 
@@ -373,8 +391,9 @@ $.fn.precisionPopOut = function (settings) {
                 popText.css({
                     rotate: 90,
                     transformOrigin: '0 0',
-                    left: 30,
-                    lineHeight: config.clickWidth + 'px'
+                    left: 25,
+                    width: config.clickHeightV,
+                    lineHeight: config.clickWidthV + 'px'
                 });
 
             } else {
@@ -382,8 +401,8 @@ $.fn.precisionPopOut = function (settings) {
                     right: 0,
                     left: 'auto',
                     top: 'auto',
-                    height: config.clickHeight,
-                    width: config.clickWidth
+                    height: config.clickHeightV,
+                    width: config.clickWidthV
 
                 });
                 popClick.setVertPos();
@@ -392,8 +411,9 @@ $.fn.precisionPopOut = function (settings) {
                 popText.css({
                     rotate: 90,
                     transformOrigin: '0 0',
-                    lineHeight: config.clickWidth + 'px',
-                    left: 30
+                    lineHeight: config.clickHeightV + 'px',
+                    left: 25,
+                    width: config.clickHeightV
                 });
                 popClick.setVertPos('right');
             }
@@ -401,18 +421,18 @@ $.fn.precisionPopOut = function (settings) {
 
         //= SET THE DIRECTION FOR THE SLIDE OUT
         //===========================================================================
-        var setPopDirection = function(){
-            if(config.popOutDirection == 'top'){
+        var setPopDirection = function () {
+            if (config.popOutDirection == 'top') {
                 ppPopOut.css({
                     top: '-' + config.height,
                     left: 0
                 });
-            } else if(config.popOutDirection == 'bottom'){
+            } else if (config.popOutDirection == 'bottom') {
                 ppPopOut.css({
                     bottom: '-' + config.height,
                     left: 0
                 });
-            } else if(config.popOutDirection == 'left'){
+            } else if (config.popOutDirection == 'left') {
                 ppPopOut.css({
                     left: '-' + config.width,
                     top: 0
@@ -459,7 +479,6 @@ $.fn.precisionPopOut = function (settings) {
             popText.css({
                 display: 'block',
                 position: 'relative',
-                width: 120,
                 textAlign: 'center',
                 color: config.textColor,
                 fontWeight: 'bold',
@@ -467,8 +486,6 @@ $.fn.precisionPopOut = function (settings) {
             });
             popClick.css({
                 background: config.clickBackground,
-                height: config.clickHeight,
-                width: config.clickWidth,
                 zIndex: 99,
                 position: 'fixed',
                 cursor: 'pointer',

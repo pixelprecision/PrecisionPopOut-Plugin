@@ -1,9 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Precision Pop Out - Documentation</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="jquery.precision-popout-1.10.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        $(function(){
+            $('#Demo1').precisionPopOut({
+                loadTweenMax: true,
+                width: '100%',
+                height: '300px',
+                clickDefaultPos: 'top',
+                clickResPos: 'bottom',
+                markUpInc: false,
+                inlineCSS: true,
+                container: '#container',
+                popClickText: 'Demo1',
+                popOutDirection: 'top'
+            });
+
+            $('#Demo2').precisionPopOut({
+                loadTweenMax: true,
+                width: '60%',
+                clickDefaultPos: 'left',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo2',
+                popOutDirection: 'left',
+                container: '#container'
+            });
+
+            $('#Demo3').precisionPopOut({
+                loadTweenMax: true,
+                width: '60%',
+                container: '#container',
+                clickDefaultPos: 'right',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo3',
+                popOutDirection: 'right'
+            });
+
+            $('#Demo4').precisionPopOut({
+                loadTweenMax: true,
+                width: '100%',
+                container: '#container',
+                height: '300px',
+                clickDefaultPos: 'bottom',
+                clickResPos: 'right',
+                markUpInc: false,
+                inlineCSS: true,
+                popClickText: 'Demo4',
+                popOutDirection: 'bottom',
+                blackOut: true
+            });
+
+            $('#Demo5').precisionPopOut({
+                loadTweenMax: true,
+                loadRotatePlugin: false,
+                inlineCSS: true,
+                markUpInc: false,
+                blackOut: true,
+                speed: 0.35,
+                responsive: true,
+                resWindowWidth: 900,
+                popup: false,
+                popClickText: 'Change Text to Whatever You Want',
+                popOutDirection: 'top',
+                clickDefaultPos: 'top',
+                clickResPos: 'bottom',
+                width: '100%',
+                height: '50%',
+                backgroundColor: '#333',
+                textColor: '#fff',
+                padding: 10,
+                container: '#container',
+                clickBackground: '#333',
+                clickColor: '#fff',
+                clickHeightV: 250,
+                clickWidthV: 30,
+                clickHeightH: 30,
+                clickWidthH: 280
+            });
+
+            //= Initialize Form
+            //$('#ppPopForm').ppPopForm();
+
+            $('.content > .left-sidebar').precisionPopOut({
+                loadTweenMax: true,
+                width: '200px',
+                height: '100%',
+                clickDefaultPos: 'left',
+                clickResPos: 'left',
+                markUpInc: false,
+                inlineCSS: true,
+                container: '#main',
+                popClickText: 'Click Me',
+                popOutDirection: 'left'
+            });
+
+            $('#featureAnimation').precisionPopOut({
+                loadTweenMax: true,
+                width: '100%',
+                height: '300px',
+                clickDefaultPos: 'top',
+                clickResPos: 'top',
+                markUpInc: false,
+                inlineCSS: true,
+                container: '#main',
+                popClickText: 'Demo1',
+                popOutDirection: 'bottom',
+                blackOut: true
+            });
+        });
+
+    </script>
 </head>
 <body>
+
+<div id="container">
+    <div id="Demo1">
+        <h1>Here is Demo 1</h1>
+    </div>
+    <div id="Demo2">
+        <h1>Here is Demo 2</h1>
+    </div>
+    <div id="Demo3">
+        <h1>Here is Demo 3</h1>
+    </div>
+    <div id="Demo4">
+        <h1>Here is Demo 4</h1>
+    </div>
+    <div id="Demo5">
+        <h1>Here is Demo 5</h1>
+    </div>
+
+    <h1>This is the main page. Watch as it slides out of the way of the popout.</h1>
+</div>
 
 </body>
 </html>
