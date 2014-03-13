@@ -15,7 +15,13 @@
     <file path="/Demo.html" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394746387646" ignored="false" />
     <file path="/jquery.precision-popout-1.10.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1393630116434" ignored="false" />
     <file path="/style.css" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394746143737" ignored="false" />
-    <file path="/jquery.precision-popout-1.2.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394745322335" ignored="false" />
+    <file path="/jquery.precision-popout-1.2.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749432538" ignored="false" />
+    <file path="/wordpress.html" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749485304" ignored="false" />
+    <file path="$PROJECT_DIR$/../PrecisionPopOut-Master-File/jquery.precision-popout-1.2.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749843224" ignored="false" />
+    <file path="$PROJECT_DIR$/../PrecisionPopOut-Master-File/jquery.precision-popout-1.2-noConflict.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749565949" ignored="false" />
+    <file path="$PROJECT_DIR$/../PrecisionPopOut-Master-File/jquery.precision-popout-1.2-noConflict.min.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749595076" ignored="false" />
+    <file path="$PROJECT_DIR$/../PrecisionPopOut-Master-File/Docs.html" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394748793154" ignored="false" />
+    <file path="/jquery.precision-popout-1.2-noConflict.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394749039142" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +41,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Docs.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Docs.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/precisionPopOut/Docs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="31" selection-start="20144" selection-end="20144" vertical-scroll-proportion="0.4261501">
+            <state line="258" column="24" selection-start="0" selection-end="26163" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="wordpress.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/precisionPopOut/wordpress.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="54" selection-start="715" selection-end="715" vertical-scroll-proportion="0.34866828">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.precision-popout-1.2.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/precisionPopOut/jquery.precision-popout-1.2.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="18" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,6 +92,7 @@
         <option value="$PROJECT_DIR$/PrecisionPopOut-Master-File/Docs.html" />
         <option value="$PROJECT_DIR$/PrecisionPopOut-Master-File/Demo.html" />
         <option value="$PROJECT_DIR$/precisionPopOut/Docs.html" />
+        <option value="$PROJECT_DIR$/precisionPopOut/wordpress.html" />
       </list>
     </option>
   </component>
@@ -76,8 +103,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="960" />
     <option name="y" value="22" />
-    <option name="width" value="1920" />
+    <option name="width" value="960" />
     <option name="height" value="1012" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -139,8 +167,9 @@
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2014-BigCommerce - FEB. 7th BACKUP" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -173,14 +202,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1012" extended-state="6" />
+    <frame x="960" y="22" width="960" height="1012" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2801494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28335112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -258,7 +287,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/precisionPopOut/Docs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="31" selection-start="20144" selection-end="20144" vertical-scroll-proportion="0.4261501">
+        <state line="258" column="24" selection-start="0" selection-end="26163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/wordpress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="24" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/jquery.precision-popout-1.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/Docs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="258" column="24" selection-start="0" selection-end="26163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/jquery.precision-popout-1.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/wordpress.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="54" selection-start="715" selection-end="715" vertical-scroll-proportion="0.34866828">
           <folding />
         </state>
       </provider>
