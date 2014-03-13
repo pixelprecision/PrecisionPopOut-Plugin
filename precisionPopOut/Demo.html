@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Precision Pop Out - Documentation</title>
+    <title>Precision Pop Out - Extra Demos</title>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="jquery.precision-popout-1.10.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+    <script src="jquery.precision-popout-1.2.min.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
@@ -25,7 +25,7 @@
             });
 
             $('#Demo2').precisionPopOut({
-                loadTweenMax: true,
+                loadTweenMax: false,
                 width: '60%',
                 clickDefaultPos: 'left',
                 clickResPos: 'right',
@@ -33,11 +33,12 @@
                 inlineCSS: true,
                 popClickText: 'Demo2',
                 popOutDirection: 'left',
-                container: '#container'
+                container: '#container',
+                closePos: 'topRight'
             });
 
             $('#Demo3').precisionPopOut({
-                loadTweenMax: true,
+                loadTweenMax: false,
                 width: '60%',
                 container: '#container',
                 clickDefaultPos: 'right',
@@ -45,11 +46,12 @@
                 markUpInc: false,
                 inlineCSS: true,
                 popClickText: 'Demo3',
-                popOutDirection: 'right'
+                popOutDirection: 'right',
+                closePos: 'topLeft'
             });
 
             $('#Demo4').precisionPopOut({
-                loadTweenMax: true,
+                loadTweenMax: false,
                 width: '100%',
                 container: '#container',
                 height: '300px',
@@ -59,11 +61,12 @@
                 inlineCSS: true,
                 popClickText: 'Demo4',
                 popOutDirection: 'bottom',
-                blackOut: true
+                blackOut: true,
+                closePos: 'topMiddle'
             });
 
             $('#Demo5').precisionPopOut({
-                loadTweenMax: true,
+                loadTweenMax: false,
                 loadRotatePlugin: false,
                 inlineCSS: true,
                 markUpInc: false,
@@ -87,7 +90,10 @@
                 clickHeightV: 250,
                 clickWidthV: 30,
                 clickHeightH: 30,
-                clickWidthH: 280
+                clickWidthH: 280,
+                clickRndCorners: true,
+                clickRadius: 15,
+                closePos: 'btmMiddle'
             });
 
             //= Initialize Form

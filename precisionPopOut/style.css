@@ -2,7 +2,13 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 #container {
-    padding: 20px;
+    padding: 20px 50px;
+}
+#precisionClose {
+    font-weight: 100;
+}
+.comment {
+    color: red;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 100;

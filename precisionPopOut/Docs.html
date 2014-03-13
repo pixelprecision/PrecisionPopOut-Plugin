@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Precision Pop Out - Documentation</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+    <script src="jquery.precision-popout-1.2.min.js"></script>
+
+
+
+    <script>
+        $(function(){
+            $('#Demo1').precisionPopOut({
+                loadTweenMax: true, //=Loads the animation library
+                loadRotatePlugin: true, //=Loads the rotate text library
+                inlineCSS: true,
+                markUpInc: false, //=Set to true to use your own button
+                blackOut: true, //=Set to true to enable a fade out
+                speed: 0.35, //=Set your pop outs speed
+                responsive: true, //=Would you like the pop out to be responsive?
+                resWindowWidth: 900, //=What window width would you like the responsive pop out to show at?
+                popup: false, //=Would you like the pop out to be a pop up instead?
+                popClickText: 'This Whole Page In Pop Out', //=Set your button text here
+                popOutDirection: 'bottom', //=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')
+                clickDefaultPos: 'left', //=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')
+                clickResPos: 'left', //=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')
+                width: '100%', //=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')
+                height: '65%', //=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')
+                backgroundColor: '#333', //=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')
+                textColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')
+                padding: 20, //=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')
+                container: '#container', //=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')
+                clickBackground: '#333', //=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')
+                clickColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')
+                clickHeightV: 300, //=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthV: 50, //=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickHeightH: 30, //=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthH: 280, //=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickRndCorners: false, //=Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')
+                clickRadius: 15, //=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')
+                closePos: 'topRight', //=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')
+                closeBackground: '#f14c20', //=Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')
+                closeColor: '#fff' //=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')
+            });
+            $('#Demo2').precisionPopOut({
+                loadTweenMax: false, //=Loads the animation library
+                loadRotatePlugin: true, //=Loads the rotate text library
+                inlineCSS: true,
+                markUpInc: false, //=Set to true to use your own button
+                blackOut: true, //=Set to true to enable a fade out
+                speed: 0.35, //=Set your pop outs speed
+                responsive: true, //=Would you like the pop out to be responsive?
+                resWindowWidth: 900, //=What window width would you like the responsive pop out to show at?
+                popup: false, //=Would you like the pop out to be a pop up instead?
+                popClickText: 'Change Text to Whatever You Want', //=Set your button text here
+                popOutDirection: 'top', //=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')
+                clickDefaultPos: 'top', //=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')
+                clickResPos: 'bottom', //=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')
+                width: '100%', //=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')
+                height: '200px', //=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')
+                backgroundColor: '#333', //=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')
+                textColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')
+                padding: 10, //=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')
+                container: '#container', //=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')
+                clickBackground: '#333', //=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')
+                clickColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')
+                clickHeightV: 250, //=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthV: 30, //=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickHeightH: 30, //=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthH: 280, //=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickRndCorners: true, //=Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')
+                clickRadius: 15, //=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')
+                closePos: 'btmMiddle', //=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')
+                closeBackground: 'none', //=Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')
+                closeColor: '#fff' //=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')
+            });
+            $('#Demo3').precisionPopOut({
+                loadTweenMax: false, //=Loads the animation library
+                loadRotatePlugin: true, //=Loads the rotate text library
+                inlineCSS: true,
+                markUpInc: false, //=Set to true to use your own button
+                blackOut: true, //=Set to true to enable a fade out
+                speed: 0.35, //=Set your pop outs speed
+                responsive: true, //=Would you like the pop out to be responsive?
+                resWindowWidth: 900, //=What window width would you like the responsive pop out to show at?
+                popup: false, //=Would you like the pop out to be a pop up instead?
+                popClickText: 'Demo 3', //=Set your button text here
+                popOutDirection: 'right', //=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')
+                clickDefaultPos: 'right', //=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')
+                clickResPos: 'right', //=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')
+                width: '50%', //=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')
+                height: '100%', //=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')
+                backgroundColor: '#ffd500', //=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')
+                textColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')
+                padding: 30, //=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')
+                container: '#container', //=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')
+                clickBackground: '#116ff7', //=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')
+                clickColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')
+                clickHeightV: 250, //=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthV: 40, //=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickHeightH: 30, //=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthH: 280, //=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickRndCorners: false, //=Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')
+                clickRadius: 15, //=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')
+                closePos: 'topLeft', //=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')
+                closeBackground: '#333', //= Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')
+                closeColor: '#fff' //=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')
+            });
+            $('#Demo4').precisionPopOut({
+                loadTweenMax: false, //=Loads the animation library
+                loadRotatePlugin: true, //=Loads the rotate text library
+                inlineCSS: true,
+                markUpInc: false, //=Set to true to use your own button
+                blackOut: true, //=Set to true to enable a fade out
+                speed: 0.35, //=Set your pop outs speed
+                responsive: true, //=Would you like the pop out to be responsive?
+                resWindowWidth: 900, //=What window width would you like the responsive pop out to show at?
+                popup: false, //=Would you like the pop out to be a pop up instead?
+                popClickText: 'Demo4', //=Set your button text here
+                popOutDirection: 'left', //=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')
+                clickDefaultPos: 'bottom', //=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')
+                clickResPos: 'bottom', //=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')
+                width: '40%', //=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')
+                height: '100%', //=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')
+                backgroundColor: '#f14c20', //=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')
+                textColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')
+                padding: 20, //=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')
+                container: '#container', //=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')
+                clickBackground: '#f14c20', //=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')
+                clickColor: '#fff', //=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')
+                clickHeightV: 150, //=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthV: 30, //=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')
+                clickHeightH: 30, //=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickWidthH: 280, //=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')
+                clickRndCorners: false, //= Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')
+                clickRadius: 15, //=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')
+                closePos: 'topRight', //=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')
+                closeBackground: 'none', //=Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')
+                closeColor: '#fff' //=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Precision Pop Out Plugin - Documentation</h1>
+        <h2>This is the main page. Watch as it slides out of the way of the popout.</h2>
+
+        <div id="Demo">
+            <h2><strong>Instructions:</strong></h2>
+            <h3>Include the latest version of jQuery in the head tag as well as the minified plugin.</h3>
+            <pre>
+                &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"&gt;&lt;/script&gt;
+                &lt;script type="text/javascript" src="jquery.precision-popout-1.2.min.js"&gt;&lt;/script&gt;
+
+            </pre>
+
+            <h3>Invoke the plugin on whatever you want to encapsulate in a pop out like so. Just put in the ID or
+                Class of the html tag you are encapsulating. You don't have to include all of the options,
+                but they are there to customize your pop out.</h3>
+            <pre>
+                &lt;script&gt;
+                    $('#Demo2').precisionPopOut({
+                            loadTweenMax: true, <span class='comment'>//=Loads the animation library</span>
+                            loadRotatePlugin: true, <span class='comment'>//=Loads the rotate text library</span>
+                            inlineCSS: true,
+                            markUpInc: false, <span class='comment'>//=Set to true to use your own button</span>
+                            blackOut: true, <span class='comment'>//=Set to true to enable a fade out</span>
+                            speed: 0.35, <span class='comment'>//=Set your pop outs speed</span>
+                            responsive: true, <span class='comment'>//=Would you like the pop out to be responsive?</span>
+                            resWindowWidth: 900, <span class='comment'>//=What window width would you like the responsive pop out to show at?</span>
+                            popup: false, <span class='comment'>//=Would you like the pop out to be a pop up instead?</span>
+                            popClickText: 'Change Text to Whatever You Want', <span class='comment'>//=Set your button text here</span>
+                            popOutDirection: 'left', <span class='comment'>//=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')</span>
+                            clickDefaultPos: 'top', <span class='comment'>//=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')</span>
+                            clickResPos: 'bottom', <span class='comment'>//=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')</span>
+                            width: '40%', <span class='comment'>//=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')</span>
+                            height: '100%', <span class='comment'>//=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')</span>
+                            backgroundColor: '#333', <span class='comment'>//=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            textColor: '#fff', <span class='comment'>//=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')</span>
+                            padding: 10, <span class='comment'>//=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')</span>
+                            container: '#container', <span class='comment'>//=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')</span>
+                            clickBackground: '#333', <span class='comment'>//=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            clickColor: '#fff', <span class='comment'>//=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            clickHeightV: 250, <span class='comment'>//=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickWidthV: 30, <span class='comment'>//=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickHeightH: 30, <span class='comment'>//=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickWidthH: 280, <span class='comment'>//=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickRndCorners: true, <span class='comment'>//=Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')</span>
+                            clickRadius: 15, <span class='comment'>//=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')</span>
+                            closePos: 'topRight', <span class='comment'>//=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')</span>
+                            closeBackground: 'none', <span class='comment'>//=Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            closeColor: '#fff' <span class='comment'>//=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                    });
+                &lt;/script&gt;
+            </pre>
+        </div>
+        <div id="Demo1">
+            <h3>Include the latest version of jQuery in the head tag as well as the minified plugin.</h3>
+            <pre>
+                &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"&gt;&lt;/script&gt;
+                &lt;script type="text/javascript" src="jquery.precision-popout-1.2.min.js"&gt;&lt;/script&gt;
+
+            </pre>
+
+            <h3>Invoke the plugin on whatever you want to encapsulate in a pop out like so. Just put in the ID or
+                Class of the html tag you are encapsulating. You don't have to include all of the options,
+                but they are there to customize your pop out.</h3>
+            <pre>
+                &lt;script&gt;
+                    $('#Demo2').precisionPopOut({
+                            loadTweenMax: true, <span class='comment'>//=Loads the animation library</span>
+                            loadRotatePlugin: true, <span class='comment'>//=Loads the rotate text library</span>
+                            inlineCSS: true,
+                            markUpInc: false, <span class='comment'>//=Set to true to use your own button</span>
+                            blackOut: true, <span class='comment'>//=Set to true to enable a fade out</span>
+                            speed: 0.35, <span class='comment'>//=Set your pop outs speed</span>
+                            responsive: true, <span class='comment'>//=Would you like the pop out to be responsive?</span>
+                            resWindowWidth: 900, <span class='comment'>//=What window width would you like the responsive pop out to show at?</span>
+                            popup: false, <span class='comment'>//=Would you like the pop out to be a pop up instead?</span>
+                            popClickText: 'Change Text to Whatever You Want', <span class='comment'>//=Set your button text here</span>
+                            popOutDirection: 'left', <span class='comment'>//=Set which side of screen you want pop out on ('top', 'right', 'left', 'bottom')</span>
+                            clickDefaultPos: 'top', <span class='comment'>//=Set which side of screen you want button on for desktop ('top', 'right', 'left', 'bottom')</span>
+                            clickResPos: 'bottom', <span class='comment'>//=Set which side of screen you want button on for mobile/responsive ('top', 'right', 'left', 'bottom')</span>
+                            width: '40%', <span class='comment'>//=Set the width of the pop out. Can be percentage or pixels (ie. '100%', or '500px')</span>
+                            height: '100%', <span class='comment'>//=Set the height of the pop out. Can be percentage or pixels (ie. '60%', or '300px')</span>
+                            backgroundColor: '#333', <span class='comment'>//=Set the color of the pop out. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            textColor: '#fff', <span class='comment'>//=Set the color of the button text. Can be hex or color (ie. '#333333', or 'white')</span>
+                            padding: 10, <span class='comment'>//=Set the padding of the pop out. Can be integer or css style (ie. 30, or '30px')</span>
+                            container: '#container', <span class='comment'>//=Set the outermost container you have that you want to slide out of the way. Can be ID, Class, or tag (ie. '#Wrapper', '.mainContent', or 'body')</span>
+                            clickBackground: '#333', <span class='comment'>//=Set the color of the button. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            clickColor: '#fff', <span class='comment'>//=Set the color of the button text. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            clickHeightV: 250, <span class='comment'>//=Set the height of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickWidthV: 30, <span class='comment'>//=Set the width of the button if on side (vertical button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickHeightH: 30, <span class='comment'>//=Set the height of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickWidthH: 280, <span class='comment'>//=Set the width of the button if on top/bottom (horizontal button). Can be integer or css style (ie. 300, or '300px')</span>
+                            clickRndCorners: true, <span class='comment'>//=Set to true if you want rounded corners. Can be integer or css style (ie. 300, or '300px')</span>
+                            clickRadius: 15, <span class='comment'>//=Set the radius of the rounded corners. Can be integer or css style (ie. 10, or '10px')</span>
+                            closePos: 'topRight', <span class='comment'>//=Set the position of the close button ('topLeft', 'topMiddle', 'topLeft', 'btmLeft', 'btmMiddle', 'btmTop')</span>
+                            closeBackground: 'none', <span class='comment'>//=Set the color of the close button. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                            closeColor: '#fff' <span class='comment'>//=Set the color of the close button text. Can be hex or color (ie. '#ffd500', or 'black')</span>
+                    });
+                &lt;/script&gt;
+            </pre>
+        </div>
+        <div id="Demo2">
+            <h1>Here is Demo 2</h1>
+        </div>
+        <div id="Demo3">
+            <h1>Here is Demo 3</h1>
+        </div>
+        <div id="Demo4">
+            <h1>Here is Demo 4</h1>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
