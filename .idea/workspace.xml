@@ -7,7 +7,7 @@
     <list default="true" id="44fde01d-2400-4668-a2e5-40ce5c8a7a98" name="Default" comment="" />
     <ignored path="PrecisionPopOut.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Docs.html" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394746253429" ignored="false" />
+    <file path="/Docs.html" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1394746906878" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014-BigCommerce - FEB. 7th BACKUP/Styles/custom.css" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1393625962730" ignored="false" />
     <file path="/custom.css" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1393623775865" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014-BigCommerce - FEB. 7th BACKUP/js/functions.js" changelist="44fde01d-2400-4668-a2e5-40ce5c8a7a98" time="1393624201603" ignored="false" />
@@ -35,28 +35,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/style.css">
+      <file leaf-file-name="Docs.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/precisionPopOut/Docs.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Docs.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/Docs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="-9.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Demo.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/Demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="111" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0968523">
+            <state line="198" column="31" selection-start="20144" selection-end="20144" vertical-scroll-proportion="0.4261501">
               <folding />
             </state>
           </provider>
@@ -83,6 +65,7 @@
         <option value="$PROJECT_DIR$/PrecisionPopOut-Master-File/jquery.precision-popout-1.2.min.js" />
         <option value="$PROJECT_DIR$/PrecisionPopOut-Master-File/Docs.html" />
         <option value="$PROJECT_DIR$/PrecisionPopOut-Master-File/Demo.html" />
+        <option value="$PROJECT_DIR$/precisionPopOut/Docs.html" />
       </list>
     </option>
   </component>
@@ -142,17 +125,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PrecisionPopOut-Master-File" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrecisionPopOut" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrecisionPopOut" />
+              <option name="myItemId" value="precisionPopOut" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,41 +256,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/jquery.precision-popout-1.2.min.js">
+    <entry file="file://$PROJECT_DIR$/precisionPopOut/Docs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="411" selection-end="411" vertical-scroll-proportion="0.25120774">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/jquery.precision-popout-1.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="0" selection-end="22554" vertical-scroll-proportion="0.20618556">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/Docs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="-9.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrecisionPopOut-Master-File/Demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="111" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0968523">
+        <state line="198" column="31" selection-start="20144" selection-end="20144" vertical-scroll-proportion="0.4261501">
           <folding />
         </state>
       </provider>
